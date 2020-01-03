@@ -3,12 +3,14 @@
   <groupId>com.HelloProject</groupId>
   <artifactId>HelloProject</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
   <dependencies>
   <!-- https://mvnrepository.com/artifact/org.junit/junit5-engine -->
   <dependency>
     <groupId>junit</groupId>
     <artifactId>junit-dep</artifactId>
     <version>4.8.2</version>
+    
     <scope>test</scope>
 </dependency>
   </dependencies>
