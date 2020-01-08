@@ -25,7 +25,7 @@ pipeline {
 
           stage('deployment stage') {
               steps {
-                 deploy adapters: [tomcat9(credentialsId: '2d2d4d19-3332-4188-8299-cbc5c741768d', path: '', url: 'http://localhost:8080')], contextPath: 'rps1', war: 'target/*.war'
+                 archiveArtifacts '*.war'
         }
     }
 
