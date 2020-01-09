@@ -32,7 +32,7 @@ pipeline {
     stage('deployment to Jfrog artifactory') {
               steps {
 			rtUpload (
-    					serverId: 'Artifactory-1',
+    					serverId: 'First_server',
     					spec: '''{
           							"files": [
             									{
