@@ -53,11 +53,9 @@ pipeline {
     }
 	
         stage('Docker build') {
-            agent { dockerfile true
-            		image 'test_image/tomcat' }
+            agent { dockerfile true}
             steps {
-                sh 'node --version'
-                sh 'svn --version'
+                sh '''docker build -t test1/tomcat . '''
             }
         }
     
