@@ -1,6 +1,6 @@
 pipeline {
 
-    agent {dockerfile true}
+    agent any
     tools {
         maven 'maven' 
     }
@@ -53,8 +53,8 @@ pipeline {
     }
 	
 	
-	
-        stage('Docker') {
+	   agent { docker 'maven:3-alpine' }
+        stage('Docker build') {
             steps {
                 sh 'node --version'
                 sh 'svn --version'
