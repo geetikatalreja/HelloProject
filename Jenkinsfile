@@ -1,6 +1,6 @@
 pipeline {
 
-    agent any
+    agent {dockerfile true}
     tools {
         maven 'maven' 
     }
@@ -53,15 +53,14 @@ pipeline {
     }
 	
 	
-	agent { dockerfile true }
-    stages {
+	
         stage('Docker') {
             steps {
                 sh 'node --version'
                 sh 'svn --version'
             }
         }
-    }
+    
 	
   }
 
