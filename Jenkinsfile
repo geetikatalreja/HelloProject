@@ -57,6 +57,12 @@ pipeline {
                 bat '''docker build -t test1/tomcat . '''
             }
         }
+        
+        stage('Docker run') {            
+            steps {
+                bat '''docker container run -it -d --name tomcatcontainer4 -p 8082:8080 test1/tomcat'''
+            }
+        }
     
 	
   }
