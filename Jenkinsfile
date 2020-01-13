@@ -52,10 +52,9 @@ pipeline {
         }
     }
 	
-        stage('Docker build') {
-            agent { dockerfile true}
+        stage('Docker build') {            
             steps {
-                sh '''docker build -t test1/tomcat . '''
+                bat '''docker build -t test1/tomcat . '''
             }
         }
     
